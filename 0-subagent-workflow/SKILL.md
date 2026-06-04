@@ -13,6 +13,13 @@ Spawn read-only subagents when the task is broad, uncertain, or cross-file:
 2. **Skeptic**: identify edge cases, risky assumptions, bugs, and behavior regressions.
 3. **Verifier**: find tests, fixtures, commands, and the smallest validation path.
 
+Cost control:
+
+- Searcher: use low reasoning.
+- Verifier: use low reasoning.
+- Skeptic: use medium reasoning.
+- Use high/xhigh subagents only when explicitly asked or needed for deep architecture reasoning.
+
 Each subagent returns only:
 
 - conclusion
