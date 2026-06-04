@@ -26,7 +26,8 @@ Before committing:
 - Inspect `git status --short`, `git diff --name-only`, and staged diff if any.
 - Decide commit groups before staging.
 - State the planned commit list before the first commit.
-- If 5+ files or multiple domains changed, pause after listing proposed commits and proceed only if the user does not object.
+- If the user provides a "what changed" list, treat each independent bullet or bullet cluster as a candidate commit.
+- If 5+ files, multiple domains, or 3+ independent bullets changed, a single commit is forbidden unless the user explicitly asks for one commit.
 
 Default split policy:
 
@@ -36,6 +37,8 @@ Default split policy:
 - Docs: separate commit.
 - Config, tooling, generated files, and repo metadata: separate commit.
 - Do not combine docs, tests, config, and runtime code in one commit unless explicitly asked.
+- Do not combine API behavior, parser/data handling, bug fixes, and test/tooling cleanup in one commit unless explicitly asked.
 - If multiple logical changes exist, split them. If unsure, prefer more small commits.
+- If a proposed commit subject would be vague, broad, or plural, split it further.
 
 Never stage unrelated changes.
