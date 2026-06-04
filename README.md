@@ -4,6 +4,7 @@ Small, focused Codex skills for a lean coding workflow:
 
 - structure rough tasks before editing
 - use read-only subagents for noisy exploration
+- keep subagents cheaper than the main thread by default
 - coordinate parallel Codex worktrees
 - keep commit messages consistent
 
@@ -44,6 +45,8 @@ cp AGENTS.md ~/.codex/AGENTS.md
 ```
 
 Or copy it into a repo root to apply only to that repo. Keep detailed workflows in skills so `AGENTS.md` stays small.
+
+The defaults also tell Codex to keep search/test subagents on low reasoning, risk-review subagents on medium reasoning, and reserve high/xhigh subagents for explicit requests or deep architecture work.
 
 ## Workflow
 
