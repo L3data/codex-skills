@@ -17,4 +17,6 @@ Use this schema for commit subjects:
 - `Chore <thing>`: tooling, build, formatting, generated files, repo maintenance, or CI.
 - `Revert <thing>`: roll back a previous change.
 
-Rules: no Conventional Commits syntax, no trailing period, prefer user-visible outcome, and keep the subject under 72 characters when practical. If committing, inspect staged changes and recent commit style first; never stage unrelated changes.
+Rules: no Conventional Commits syntax, no trailing period, prefer user-visible outcome, and keep the subject under 72 characters when practical.
+
+Commit granularity: keep one logical change per commit. Split separable code, docs, config, tests, repo metadata, and tooling changes into separate commits. If committing, inspect staged changes and recent commit style first; never stage unrelated changes.
