@@ -16,7 +16,7 @@ The skill names start with `0-` so they appear early in Codex's `$` skill picker
 - `0-subagent-workflow`: runs read-only Searcher, Skeptic, and Verifier subagents, then lets the main agent implement.
 - `0-parallel-codex`: coordinates multiple Codex terminals across branches and git worktrees.
 
-## Install
+## Install Skills
 
 Install a skill by copying its folder into your Codex skills directory:
 
@@ -34,6 +34,16 @@ $skill-installer https://github.com/L3data/codex-skills/tree/main/0-ship-task
 ```
 
 Restart Codex after installing or updating skills.
+
+## Optional AGENTS.md
+
+`AGENTS.md` is a compact always-on defaults file. Copy it globally:
+
+```bash
+cp AGENTS.md ~/.codex/AGENTS.md
+```
+
+Or copy it into a repo root to apply only to that repo. Keep detailed workflows in skills so `AGENTS.md` stays small.
 
 ## Workflow
 
