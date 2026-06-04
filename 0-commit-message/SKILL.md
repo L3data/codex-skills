@@ -21,4 +21,21 @@ Rules: no Conventional Commits syntax, no trailing period, prefer user-visible o
 
 Behavior: if the user asks to draft, suggest, review, or improve a message, do not commit. If this skill is invoked with an implementation task, treat it as atomic commit mode: after verification, stage intended changes and create commits. If the user explicitly says not to commit, do not commit.
 
-Commit granularity: keep one logical change per commit. Split separable code, docs, config, tests, repo metadata, and tooling changes into separate commits. If nothing is staged and scope is clear, stage only intended files; otherwise ask. Never stage unrelated changes.
+Before committing:
+
+- Inspect `git status --short`, `git diff --name-only`, and staged diff if any.
+- Decide commit groups before staging.
+- State the planned commit list before the first commit.
+- If 5+ files or multiple domains changed, pause after listing proposed commits and proceed only if the user does not object.
+
+Default split policy:
+
+- Runtime behavior changes: separate commit per independently reviewable behavior.
+- Shared helpers/refactors: separate commit.
+- Tests: separate commit unless they are direct coverage for a small fix.
+- Docs: separate commit.
+- Config, tooling, generated files, and repo metadata: separate commit.
+- Do not combine docs, tests, config, and runtime code in one commit unless explicitly asked.
+- If multiple logical changes exist, split them. If unsure, prefer more small commits.
+
+Never stage unrelated changes.
