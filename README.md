@@ -51,8 +51,11 @@ Or copy it into a repo root to apply only to that repo. Keep detailed workflows 
 $0-ship-task <rough task>
 $0-subagent-workflow analyze the task before implementing
 $0-parallel-codex work on this task branch oi
-$0-commit-message draft a commit message for staged changes
+$0-commit-message draft a commit message only
+$0-commit-message commit the staged changes
 ```
+
+Say `draft` when you only want a message. Say `commit` when you want Codex to create the git commit.
 
 Use `0-ship-task` as the default operating loop, `0-subagent-workflow` when the task is broad or uncertain, `0-parallel-codex` for multi-terminal branch coordination, and `0-commit-message` when drafting or creating commits.
 
