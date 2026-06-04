@@ -1,5 +1,5 @@
 ---
-name: ship-task
+name: "0-ship-task"
 description: "Use for structured end-to-end coding tasks."
 ---
 
@@ -20,4 +20,4 @@ Defaults:
 - Avoid unrelated refactors and dependency changes.
 - Prefer existing repo patterns over new abstractions.
 - Keep main context clean; do not paste noisy logs unless they matter.
-- Use the user's commit-message schema when committing.
+- Use `$0-commit-message` when committing.

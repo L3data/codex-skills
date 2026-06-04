@@ -1,5 +1,5 @@
 ---
-name: subagent-workflow
+name: "0-subagent-workflow"
 description: "Use for read-only subagent exploration and review."
 ---
 

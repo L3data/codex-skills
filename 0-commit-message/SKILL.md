@@ -1,6 +1,6 @@
 ---
-name: commit-message
-description: "Use when drafting, reviewing, validating, or creating git commit messages."
+name: "0-commit-message"
+description: "Use for git commit messages."
 ---
 
 # Commit Message
