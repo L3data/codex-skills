@@ -4,7 +4,7 @@ Small, focused Codex skills for a lean coding workflow:
 
 - structure rough tasks before editing
 - use read-only subagents for noisy exploration
-- keep subagents cheaper than the main thread by default
+- force read-only subagents to stay cheaper than the main thread
 - coordinate parallel Codex worktrees
 - keep commit messages consistent
 
@@ -15,7 +15,7 @@ The skill names start with `0-` so they appear early in Codex's `$` skill picker
 - `0-commit-message`: enforces the `Add`, `Fix`, `Update`, `Remove`, `Refactor`, `Test`, `Docs`, `Chore`, and `Revert` subject schema.
 - `0-vocalize-task`: turns rough thoughts into a clear task brief and ready prompt.
 - `0-ship-task`: a lightweight GSD-style loop: brief, explore, plan, build, verify, close.
-- `0-subagent-workflow`: runs read-only Searcher, Skeptic, and Verifier subagents, then lets the main agent implement.
+- `0-subagent-workflow`: runs cheaper read-only Searcher, Skeptic, and Verifier subagents, then lets the main agent implement.
 - `0-parallel-codex`: coordinates multiple Codex terminals across branches and git worktrees.
 
 ## Install Skills

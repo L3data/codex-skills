@@ -15,9 +15,10 @@ Spawn read-only subagents when the task is broad, uncertain, or cross-file:
 
 Cost control:
 
-- Searcher: use low reasoning.
-- Verifier: use low reasoning.
-- Skeptic: use medium reasoning.
+- Searcher: force low reasoning; do not inherit the main thread model/reasoning.
+- Verifier: force low reasoning; do not inherit the main thread model/reasoning.
+- Skeptic: force medium reasoning; do not inherit xhigh from the main thread.
+- If the subagent tool cannot choose a cheaper reasoning level, do not spawn a read-only subagent for simple search; use local tools in the main thread.
 - Use high/xhigh subagents only when explicitly asked or needed for deep architecture reasoning.
 
 Each subagent returns only:
