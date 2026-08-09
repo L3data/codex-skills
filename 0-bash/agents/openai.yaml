@@ -1,0 +1,4 @@
+interface:
+  display_name: "0 Bash"
+  short_description: "Bundle blocked commands into one Bash script"
+  default_prompt: "Use $0-bash to collect commands I must run manually into one temporary Bash script."

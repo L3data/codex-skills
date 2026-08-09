@@ -13,6 +13,7 @@ The skill names start with `0-` so they appear early in Codex's `$` skill picker
 ## Skills
 
 - `0-commit-message`: enforces the `Add`, `Fix`, `Update`, `Remove`, `Refactor`, `Test`, `Docs`, `Chore`, and `Revert` subject schema.
+- `0-bash`: bundles commands requiring sudo, elevated access, or manual execution into one temporary Bash script.
 - `0-vocalize-task`: turns rough thoughts into a clear task brief and ready prompt.
 - `0-ship-task`: a lightweight GSD-style loop: brief, explore, plan, build, verify, close.
 - `0-subagent-workflow`: runs cheaper read-only Searcher, Skeptic, and Verifier subagents, then lets the main agent implement.
@@ -24,6 +25,7 @@ Install a skill by copying its folder into your Codex skills directory:
 
 ```bash
 cp -r 0-commit-message ~/.codex/skills/
+cp -r 0-bash ~/.codex/skills/
 cp -r 0-vocalize-task ~/.codex/skills/
 cp -r 0-ship-task ~/.codex/skills/
 cp -r 0-subagent-workflow ~/.codex/skills/
@@ -55,6 +57,7 @@ The defaults also tell Codex to keep search/test subagents on low reasoning, ris
 ```text
 $0-vocalize-task <rough thoughts>
 $0-ship-task <clear task>
+$0-bash collect commands that I need to run manually
 $0-subagent-workflow analyze the task before implementing
 $0-parallel-codex work on this task branch oi
 $0-commit-message draft a commit message only
@@ -63,7 +66,7 @@ $0-commit-message commit the staged changes
 
 Say `draft` when you only want a message. Say `commit` when you want Codex to create the git commit.
 
-Use `0-vocalize-task` to turn messy intent into a task prompt, `0-ship-task` as the default operating loop, `0-subagent-workflow` when the task is broad or uncertain, `0-parallel-codex` for multi-terminal branch coordination, and `0-commit-message` when drafting or creating commits.
+Use `0-vocalize-task` to turn messy intent into a task prompt, `0-ship-task` as the default operating loop, `0-bash` to consolidate commands that require manual execution, `0-subagent-workflow` when the task is broad or uncertain, `0-parallel-codex` for multi-terminal branch coordination, and `0-commit-message` when drafting or creating commits.
 
 ## License
 
