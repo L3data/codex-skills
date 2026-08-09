@@ -21,6 +21,14 @@ The skill names start with `0-` so they appear early in Codex's `$` skill picker
 
 ## Install Skills
 
+Install `0-bash` with the bundled installer:
+
+```bash
+./install-0-bash.sh
+```
+
+Pass a skills directory as the first argument to override `$CODEX_HOME/skills` (or `~/.codex/skills` when `CODEX_HOME` is unset).
+
 Install a skill by copying its folder into your Codex skills directory:
 
 ```bash
